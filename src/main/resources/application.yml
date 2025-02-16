@@ -7,9 +7,13 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/employee_service
     username: root
-    password: Kien1234@
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
+  elasticsearch:
+    uris: http://localhost:9200
+    username: elastic
+    password: 2oJTvF-n=d0NrcntFTLH

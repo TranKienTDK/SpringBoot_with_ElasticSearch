@@ -1,5 +1,6 @@
 package com.harryberlin.springbootwithelasticsearch.domain.entity;
 
+import com.harryberlin.springbootwithelasticsearch.domain.listener.EmployeeEntityListener;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -11,6 +12,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "employees")
+@EntityListeners(EmployeeEntityListener.class)
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class Employee {
 
