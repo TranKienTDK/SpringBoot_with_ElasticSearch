@@ -65,4 +65,12 @@ public class EmployeeController {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(employeeService.generateRandomEmployees(count));
     }
+
+    // REDIS
+    @PostMapping("/search/cache")
+    ResponseEntity<List<EmployeeResponse>> getEmployeeByFirstNameFromCache(
+            @RequestParam(name = "firstName") String firstName) {
+        return ResponseEntity.ok()
+                .body(employeeService.findEmployeeByFirstNameWithCache(firstName));
+    }
 }
